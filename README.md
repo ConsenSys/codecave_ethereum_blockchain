@@ -1,8 +1,16 @@
 # Local Ethereum Blockchain
 
+See also : [https://github.com/ethereum/go-ethereum/wiki/Private-network](https://github.com/ethereum/go-ethereum/wiki/Private-network)
+
+
 ## Setting up your Ethereum Node(s)
 
 ### 1. Prereq : Install Geth
+
+For windows : [https://ethereum.github.io/go-ethereum/downloads/](https://ethereum.github.io/go-ethereum/downloads/) 
+
+
+For a mac :   
 
 ```
 $ brew update
@@ -11,9 +19,11 @@ $ brew tap ethereum/ethereum
 $ brew install ethereum
 ```
 
+
 ### 2. Prereq : create /projects 
 
-Create a `/projects` symbolic link 
+Create a `/projects` symbolic link    
+*(Note:  This step is simply so "/projects" can be used in all other commands, instead you could use full paths, or set an env var)*
 
 ```
 $ mkdir <my projects folder>
@@ -35,7 +45,7 @@ With the following contents :
 ```
 {  
      "config": {
-       "chainId": 61,
+       "chainId": 1000,
        "homesteadBlock": 0,
        "eip155Block": 0,
        "eip158Block": 0
@@ -61,7 +71,7 @@ $ geth --datadir /projects/local_ethereum_blockchain/node1 init /projects/local_
 ### 6. Start that Ethereum node
 
 ```
-$ geth --datadir /projects/local_ethereum_blockchain/node1 --networkid 4552 console
+$ geth --datadir /projects/local_ethereum_blockchain/node1 --networkid 1000 console
 ```
 
 ### 7. Initialise another Ethereum node
@@ -73,7 +83,7 @@ $ geth --datadir /projects/local_ethereum_blockchain/node-2 init /projects/local
 ### 8. Start the 2nd Ethereum node
 
 ```
-$ geth --datadir /projects/local_ethereum_blockchain/node-2 --port 30304 --nodiscover --networkid 4552 console
+$ geth --datadir /projects/local_ethereum_blockchain/node-2 --port 30304 --nodiscover --networkid 1000 console
 ```
 
 ### 9. Connect one node to the other
