@@ -1,4 +1,4 @@
-# Local Ethereum Blockchain
+# Local Ethereum Network
 
 See also : [https://github.com/ethereum/go-ethereum/wiki/Private-network](https://github.com/ethereum/go-ethereum/wiki/Private-network)
 
