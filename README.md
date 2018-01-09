@@ -19,6 +19,13 @@ $ brew tap ethereum/ethereum
 $ brew install ethereum
 ```
 
+For linux (Ubuntu)
+```
+sudo apt-get install software-properties-common
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
+```
 
 ### 2. Prereq : create /projects 
 
